@@ -1,0 +1,462 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+   2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* //
+Altijd wat ruimte padding op inner container doen --> text valt er dan niet vanaf
+voor ieder blok nieuwe inner container
+ */
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    /*colors*/
+    --purple: HSL(259, 72%, 47%);
+    --blue: HSL(241, 75%, 58%);
+    --pink: HSL(337, 83%, 60%);
+    --black: HSL(0, 0%, 5%);
+    --light-purple: HSL(248, 100%, 97%);
+    --light-grey: HSL(210, 33%, 96%);
+    --grey: HSL(0, 0%, 48%);
+    --white: HSL(0, 0%, 100%);
+    /*fonts*/
+    --header-fonts: 'Merriweather', serif;
+
+    --body-fonts: 'Roboto', sans-serif;
+    /* slope background color angles*/
+    /*--background-slope: 50px;*/
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: purple 2px solid;*/
+}
+
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+body {
+    font-family: Roboto, Arial, serif;
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Merriweather, 'Arial', 'Times New Roman', serif;
+}
+
+h1 {
+    font-size: 46px;
+    padding: 15px;
+
+}
+
+h2 {
+    padding: 16px
+}
+
+h3 {
+    font-size: 32px;
+    padding: 14px 0;
+    margin: 24px 0;
+
+
+}
+
+h4 {
+    font-size: 21px;
+    color: var(--blue);
+    padding: 14px 0;
+
+}
+
+h5 {
+    font-size: 45px;
+    padding: 16px 0;
+    color: var(--white);
+}
+
+p {
+    margin: 12px 0;
+
+
+}
+
+/* Paars #5722CD;
+Blauw #4845E4;
+Roze #ED4385;
+Zwart #0C0C0C (voor standaard tekst);
+Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:
+Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
+Grijs #7A7A7A (voor de service-tegel tekst);
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+.outer-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin: 0 20px;
+    align-items: center;
+    flex-basis: 1400px;
+    border: orange 4px solid;
+
+}
+
+.default-text-settings {
+    max-width: 850px;
+    text-align: center;
+}
+
+.default-padding {
+    padding: 100px 0;
+}
+
+/* --------------- 3.2 Other Reusables  --------------------------- */
+a:link {
+    text-decoration: none;
+    color: var(--blue);
+
+}
+
+button {
+    background-color: var(--pink);
+    color: var(--white);
+    padding: 25px 40px;
+    margin: 4px 2px;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 27px;
+    font-family: Roboto, Arial, serif;
+    box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Box shadow opzoeken */
+
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+#header {
+    background-color: var(--blue);
+    background: linear-gradient(90deg, hsl(241, 70%, 58%) 0%, hsl(248, 70%, 58%) 35%, hsl(259, 83%, 47%) 100%);
+
+    color: var(--white);
+    position: relative;
+    padding: 30px 0 0 0;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+
+}
+
+.header-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    border: black 4px solid;
+
+
+}
+
+.header-navigation ul {
+
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 400px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.header-navigation a {
+    color: var(--white);
+}
+
+
+.header-work-together {
+    padding: 100px 0;
+    margin-bottom: 90px;
+    font-size: 28px;
+    text-align: center;
+
+
+}
+
+.header-squiggle-line {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 39px);
+
+
+}
+
+
+/* --------------- 4.2 Main ------------------- */
+
+/*4.2.1 Introduction */
+#intro {
+    color: var(--blue);
+    text-align: center;
+    padding: 100px;
+
+}
+
+
+.question-intro {
+    color: var(--black);
+    margin-top: 80px;
+}
+
+.link-intro {
+    color: var(--blue);
+
+}
+
+
+/*4.2.2 Projects  */
+
+#projects {
+    background-color: var(--light-grey);
+    flex-wrap: wrap;
+    border: black 4px solid;
+    padding: 100px 0;
+}
+
+.project-article {
+    background-color: var(--light-grey);
+    display: flex;
+    flex-direction: row;
+    border: red 4px solid;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 100px 0;
+}
+
+.project-article:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+
+.project-info {
+    flex-basis: 400px;
+    padding: 0 50px 50px 50px;
+    border: palegreen 4px solid;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+
+.project-squiggle-line-two {
+    margin-top: 24px;
+}
+
+.project-images {
+    width: 100%;
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+
+}
+
+
+/*4.2.3 Services  */
+
+#services > div {
+    border: blue 4px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 100px 0;
+
+
+}
+
+.image-wrapper__services {
+    flex-basis: 60px;
+}
+
+
+.services-article {
+    display: flex;
+    flex-direction: column;
+    border: var(--blue) 1px solid;
+    padding: 40px;
+    flex-basis: 300px;
+    aspect-ratio: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+    color: var(--grey);
+    font-size: 14px;
+    box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.15);
+
+}
+
+.services-article {
+    min-height: 371.83px;
+}
+
+
+.services-image {
+    width: 80px;
+}
+
+/*4.2.4 Form  */
+
+#contact {
+    background-color: var(--blue);
+    background: linear-gradient(90deg, hsl(241, 70%, 58%) 0%, hsl(248, 70%, 58%) 35%, hsl(259, 83%, 47%) 100%);
+    color: white;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    font-weight: 550;
+
+}
+
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
+    color: var(--grey);
+}
+
+.contact__form input,
+.contact__form textarea {
+    font-family: Roboto, Arial, serif;
+    font-size: 16px;
+    width: 100%;
+    border: var(--grey) 1px solid;
+    border-radius: 5px;
+    padding: 15px;
+
+}
+
+.contact__form label {
+    padding: 20px 0;
+}
+
+
+.contact__form button {
+    width: 200px;
+    align-self: center;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* --------------- 4.3 Footer ------------------- */
+
+#footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 15px;
+}
+
+/*
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+@media screen and (max-device-width: 576px) {
+    h1, h5 {
+        font-size: 36px;
+        padding: 16px 0;
+    }
+
+    h2 {
+        font-size: 22px;
+        padding: 12px 0;
+
+    }
+
+    #intro {
+        padding: 0;
+    }
+
+    .header-navigation a {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .header-navigation {
+        display: flex;
+        justify-content: center;
+    }
+
+    .project-article {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .project-article:nth-of-type(even) {
+        flex-direction: column-reverse;
+    }
+
+    .project-info {
+        padding: 0 0 50px 0;
+        flex-basis: auto
+    }
+
+    .image-wrapper {
+        flex-basis: auto;
+    }
+
+    #services > div {
+        padding: 100px 0 50px 0;
+    }
+
+    .services-article {
+        flex-basis: 75%;
+
+    }
+
+    image-wrapper {
+
+    }
+
+
+}
+
+/*
+ services onder elkaar
+ footer in eht midden
+ */
